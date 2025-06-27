@@ -66,12 +66,9 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
-      <a href="#" class="block text-gray-700 hover:text-blue-500">Home</a>
-      <a href="#" class="block text-gray-700 hover:text-blue-500">Shop</a>
-      <a href="#" class="block text-gray-700 hover:text-blue-500">About</a>
-      <a href="#" class="block text-gray-700 hover:text-blue-500">Contact</a>
-      <a href="#" class="block text-gray-700 hover:text-blue-500">My Account</a>
-      <a href="#" class="block text-gray-700 hover:text-blue-500">Cart (2)</a>
+      {% for link in linklists['main-menu'].links %}
+        <a href="{{ link.url }}" class="block text-gray-700 hover:text-blue-500">{{ link.title }}</a>
+      {% endfor %}
     </div>
   </nav>
 </div>
