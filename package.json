@@ -4,8 +4,13 @@
   "description": "[![Generic badge](https://img.shields.io/badge/course%20available%3F-yes-green.svg)](https://shields.io/)",
   "main": "index.js",
   "scripts": {
-    "dev": "tailwindcss -i ./src/tailwind.css -o ./assets/application.css --watch",
-    "build-prod": "tailwindcss -i ./src/tailwind.css -o ./assets/application.css --minify",
+    "dev": "npm run dev:css & npm run dev:js",
+    "dev:css": "tailwindcss -i ./src/tailwind.css -o ./assets/application.css --watch",
+    "dev:js": "esbuild src/application.js --bundle --outfile=assets/application.js --watch",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "tailwindcss -i ./src/tailwind.css -o ./assets/application.css --minify",
+    "build:js": "esbuild src/application.js --bundle --outfile=assets/application.js --minify",
+    "build-prod": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,5 +29,8 @@
     "@tailwindcss/cli": "^4.1.11",
     "alpinejs": "^3.14.9",
     "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.5"
   }
 }
