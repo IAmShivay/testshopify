@@ -3,11 +3,17 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
-        <div class="flex-shrink-0 flex items-center">
-          <a href="{{ routes.root_url }}" class="text-2xl font-bold text-gray-800">
-            {% render 'logo' %}
-          </a>
-        </div>
+        {% if section.settings.logo %}
+          <img
+            src="{{ section.settings.logo | image_url: width: 150 }}"
+            alt="{{ shop.name }}"
+            class="h-8 w-auto"
+            width="150"
+            height="32"
+          >
+        {% else %}
+          {{ shop.name }}
+        {% endif %}
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center space-x-6">
