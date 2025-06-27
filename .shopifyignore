@@ -1,0 +1,6 @@
+# Ignore these files during theme operations
+# Remove the lines below if you want to sync these files
+templates/gift_card.liquid
+config/settings_data.json
+config/settings_schema.json
+layout/theme.liquid
