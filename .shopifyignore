@@ -3,8 +3,14 @@
 templates/gift_card.liquid
 config/settings_data.json
 config/settings_schema.json
+packages.json
+packagelock.json
+node_modules
+css
+
 # layout/theme.liquid
 
 # Make sure these files are NOT ignored
 !assets/application.css
 !layout/theme.liquid
+
