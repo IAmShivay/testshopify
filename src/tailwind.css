@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* Your custom styles */
+body {
+    border: 10px solid red !important;
+}
+
+.homepage {
+    text-align: center;
+    padding-top: 10em;
+}
+
+.logo {
+    width: 25%;
+}

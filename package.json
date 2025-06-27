@@ -1,0 +1,26 @@
+{
+  "name": "elizabeth_clean",
+  "version": "1.0.0",
+  "description": "[![Generic badge](https://img.shields.io/badge/course%20available%3F-yes-green.svg)](https://shields.io/)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/tailwind.css -o ./assets/application.css --watch",
+    "build-prod": "tailwindcss -i ./src/tailwind.css -o ./assets/application.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IAmShivay/testshopify.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IAmShivay/testshopify/issues"
+  },
+  "homepage": "https://github.com/IAmShivay/testshopify#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11"
+  }
+}

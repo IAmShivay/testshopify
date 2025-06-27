@@ -3,4 +3,8 @@
 templates/gift_card.liquid
 config/settings_data.json
 config/settings_schema.json
-layout/theme.liquid
+# layout/theme.liquid
+
+# Make sure these files are NOT ignored
+!assets/application.css
+!layout/theme.liquid
