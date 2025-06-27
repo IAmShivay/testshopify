@@ -1,4 +1,4 @@
-<div>
+<div x-data="{ open: false }">
   <nav class="bg-white shadow-md fixed w-full z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
@@ -47,7 +47,7 @@
 
         <!-- Mobile Menu Button -->
         <div class="flex md:hidden">
-          <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+          <button id="menu-toggle" class="text-gray-700 focus:outline-none" @click="open = !open">
             <svg
               class="h-6 w-6"
               fill="none"
