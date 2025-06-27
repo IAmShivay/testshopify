@@ -4,22 +4,23 @@
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
         {% if section.settings.logo %}
-          <img
-            src="{{ section.settings.logo | image_url: width: 150 }}"
-            alt="{{ shop.name }}"
-            class="h-8 w-auto"
-            width="150"
-            height="32"
-          >
+          <a href="{{ routes.root_url }}">
+            <img
+              src="{{ section.settings.logo | image_url: width: 150 }}"
+              alt="{{ shop.name }}"
+              class="h-8 w-auto"
+              width="150"
+              height="32"
+          ></a>
         {% else %}
           {{ shop.name }}
         {% endif %}
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center space-x-6">
-            {% for link in linklists.main-menu.links %}
-                <a href="{{ link.url }}" class="text-gray-700 hover:text-blue-500">{{ link.title }}</a>
-            {% endfor %}
+          {% for link in linklists['main-menu'].links %}
+            <a href="{{ link.url }}" class="text-gray-700 hover:text-blue-500">{{ link.title }}</a>
+          {% endfor %}
         </div>
 
         <!-- Right Side -->
